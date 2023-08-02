@@ -1,0 +1,210 @@
+@font-face {
+    font-family: GD Sherpa;
+    src: url(./font/GD_Sherpa-RegularWeb.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "GD Sherpa", Verdana, Arial, sans-serif;
+}
+
+/* In general, 1 rem equals 16 px, thus if we reduce the html font size to 62,5%, 1 rem equals 10 px, 2 rem equals 20 px, and so on. As a result, it makes it easier to calculate relative length units such as rem. */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #8E0E00;
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*scrollbar 
+width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #8E0E00; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bc5d52; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8E0E00; 
+  }
+  
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.container {
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+    width: 70rem;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-top: 5rem;
+    max-height: 80vh;
+    /* overflow: hidden; */
+    overflow: auto;
+}
+
+/* .scroll-list{
+    max-height: 80vh;
+    overflow: auto;
+} */
+
+.header {
+    padding: 0.5rem 0;
+}
+
+.header h1 {
+    color: #fff;
+}
+
+.row {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.row .task-input {
+    width: 85%;
+    height: 4rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+}
+
+.task-input::placeholder {
+    color: #fff;
+    font-size: 18px;
+}
+
+.btn-add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    background: #8E0E00; 
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-add i {
+    color: #fff;
+}
+
+.btn-add:hover {
+    color: #1fab89;
+    font-size: 24px;
+}
+
+.todo-list-items {
+    position: relative;
+    margin: 2rem 0;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.todo-list-items p {
+    padding: 1rem 1rem;
+    font-size: 18px;
+    color: #fff;
+    background: #8E0E00;
+    width: 85%;
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+}
+
+.btn-edit {
+    position: absolute;
+    top: 0;
+    left: 85%;
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+}
+
+.btn-edit i {
+    color: #fff;
+}
+
+.btn-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+.btn-delete i {
+    color: #fff;
+}
+
+.btn-delete:hover {
+    color: #1fab89;
+    font-size: 24px;
+}
+
+.btn-edit:hover {
+    color: #1fab89;
+    font-size: 24px;
+}
+.remove-all{
+    padding: 1rem 0;
+    
+}
+.btn-remove-all{
+    padding: 0.4rem 0.9rem;
+    color: #FFF;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    background: linear-gradient(to right, #3c2f2f, #8E0E00);
+ 
+}
+
+@media (max-width: 40em) {
+
+    .todo-list-items p {
+        width: 75%; 
+    }
+    .btn-edit {
+        left: 78%;
+    }
+    .container {
+        margin-top: 3rem;
+    }
+}
